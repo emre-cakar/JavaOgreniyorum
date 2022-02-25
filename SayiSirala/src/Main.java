@@ -13,11 +13,23 @@ public class Main {
         c=giris.nextInt();
 
         if (b<a && b<c){
-            System.out.printf("En kücük deger : "+b);
+            if (a<c){
+                System.out.printf(" Sirala  : %d < %d < %d",b,a,c);
+            }else{
+                System.out.printf(" Sirala  : %d < %d < %d",b,c,a);
+            }
         }else if(c<a && c<b){
-            System.out.printf("En kücük deger : "+c);
+            if (a<b){
+                System.out.printf(" Sirala  : %d < %d < %d",c,a,b);
+            }else{
+                System.out.printf(" Sirala  : %d < %d < %d",c,b,a);
+            }
         }else{
-            System.out.printf("En kücük deger : "+a);
+            if (b<c){
+                System.out.printf(" Sirala  : %d < %d < %d",a,b,c);
+            }else{
+                System.out.printf(" Sirala  : %d < %d < %d",a,c,b);
+            }
         }
 
     }
