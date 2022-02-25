@@ -13,7 +13,6 @@ public class Main {
 
         System.out.print("İşleminiz (1: Topla | 2: Cikarma | 3: Çarpma | 4: Bölme) : ");
         islem=giris.nextInt();
-
         switch (islem){
             case 1:
                 System.out.printf("%d + %d = %d",x,y,x+y);
@@ -25,7 +24,11 @@ public class Main {
                 System.out.printf("%d * %d = %d",x,y,x*y);
                 break;
             case 4:
-                System.out.printf("%d / %d = %d",x,y,x/y);
+                if (y==0){
+                    System.out.printf("Sıfıra bölünemez. ");
+                }else {
+                    System.out.printf("%d / %d = %d", x, y, x / y);
+                }
                 break;
         }
 
