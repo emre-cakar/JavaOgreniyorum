@@ -9,16 +9,12 @@ public class Main {
         int girilenSayi;
         System.out.print("Bir sayı Giriniz : ");
         girilenSayi=giris.nextInt();
-        Arrays.sort(list);
-        int kucukEnYakin=list[0] ;
-        int buyukEnYakin=list[list.length-1];
+
+        int kucukEnYakin=Integer.MIN_VALUE ;
+        int buyukEnYakin=Integer.MAX_VALUE;
         for (int i : list){
-            if ( i <girilenSayi && i>kucukEnYakin){
-                kucukEnYakin=i;
-            }
-            if ( i >girilenSayi && i<buyukEnYakin){
-                buyukEnYakin=i;
-            }
+            kucukEnYakin= ( i <girilenSayi && i>kucukEnYakin)?i:kucukEnYakin;
+            buyukEnYakin= ( i >girilenSayi && i<buyukEnYakin)?i:buyukEnYakin;
         }
         System.out.println("Dizi : " + Arrays.toString(list));
         System.out.println("Girilen Sayı : "+ girilenSayi);
